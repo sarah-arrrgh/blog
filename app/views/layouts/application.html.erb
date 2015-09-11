@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GOLB</title>
+  <title>- G L O B -</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,7 +11,11 @@
     <h1>This is a blog<h2>
   </header>
   <nav>
-    <p><%= link_to "Home", root_path %></p>
+    <p>
+      <%= link_to "Home", root_path %> |
+      <%= link_to "Create post", new_post_path %> |
+      <%= link_to "View all posts", posts_path %>
+    </p>
   </nav>
 
 <%= yield %>

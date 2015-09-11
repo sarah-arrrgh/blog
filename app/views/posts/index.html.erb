@@ -1,0 +1,11 @@
+<h2>Blog Posts...</h2>
+
+<% @posts.each do |p| %>
+  ---
+  <br />
+  <h3><%= link_to p.post_title, post_path(p.id) %></h3>
+  <p><%= p.post_content %></p><br />
+  <%= link_to "Edit post", edit_post_path(p.id) %> |
+  <%= link_to "Delete post", post_path(p.id), :method => 'delete' %>
+  <br />
+<% end %>
