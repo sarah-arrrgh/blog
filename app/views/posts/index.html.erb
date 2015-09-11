@@ -1,4 +1,4 @@
-<h2>Blog Posts...</h2>
+<h2>ALLOFTHEBLOGPOSTS</h2>
 
 <% @posts.each do |p| %>
   ---
@@ -7,5 +7,6 @@
   <p><%= p.post_content %></p><br />
   <%= link_to "Edit post", edit_post_path(p.id) %> |
   <%= link_to "Delete post", post_path(p.id), :method => 'delete' %>
+  <br />
   <br />
 <% end %>
